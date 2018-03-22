@@ -87,7 +87,7 @@ namespace BoletoNet
                     boleto.NossoNumero += boleto.DigitoNossoNumero;
                     break;
                 case 6:
-                    boleto.NossoNumero = DateTime.Now.ToString("yy") + boleto.NossoNumero;
+                    boleto.NossoNumero = boleto.DataDocumento.ToString("yy") + boleto.NossoNumero; //Nosso número deve utilizar o ano da Data do Documento devido a variação de ANO
                     boleto.DigitoNossoNumero = DigNossoNumeroSicredi(boleto);
                     boleto.NossoNumero += boleto.DigitoNossoNumero;
                     break;
